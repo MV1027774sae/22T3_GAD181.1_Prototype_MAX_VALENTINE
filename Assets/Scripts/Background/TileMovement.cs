@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Lvl1TilemapMovement : MonoBehaviour
+public class TileMovement : MonoBehaviour
 {
     private Rigidbody2D tm;
 
