@@ -9,7 +9,7 @@ public class Killbox : MonoBehaviour
     {
         if (other.tag == ("Player"))
         {
-            SceneManager.LoadScene(7);
+            SceneManager.LoadScene(5);
         }
     }
 }

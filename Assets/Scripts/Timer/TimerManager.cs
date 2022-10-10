@@ -36,7 +36,7 @@ public class TimerManager : MonoBehaviour
                 Debug.Log("Time up");
                 timerDuration = 0;
                 timerActive = false;
-                SceneManager.LoadScene(7);
+                SceneManager.LoadScene(5);
             }
             timerText.text = seconds.ToString();
         }
