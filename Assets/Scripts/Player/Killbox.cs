@@ -7,6 +7,9 @@ public class Killbox : MonoBehaviour
 {
     private void OnTriggerEnter2D(Collider2D other)
     {
-        SceneManager.LoadScene(7);
+        if (other.tag == ("Player"))
+        {
+            SceneManager.LoadScene(7);
+        }
     }
 }

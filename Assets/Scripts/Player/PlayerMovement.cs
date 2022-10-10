@@ -4,21 +4,29 @@ using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour
 {
-    public Rigidbody2D rb;
-    private bool isGrounded;
+    public Rigidbody2D rigidbody2d;
+    private BoxCollider2D boxCollider2d;
 
+    [SerializeField] private LayerMask layerMask;
     [SerializeField] private float jumpVelocity = 15f;
+
+    private void Awake()
+    {
+        rigidbody2d = transform.GetComponent<Rigidbody2D>();
+        boxCollider2d = transform.GetComponent<BoxCollider2D>();
+    }
 
     private void Update()
     {
-        if (Input.GetButtonDown("Jump") && isGrounded)
+        if (IsGrounded() && Input.GetButtonDown("Jump"))
         {
-            GetComponent<Rigidbody2D>().velocity = new Vector3(0, jumpVelocity, 0);
-            isGrounded = false;
+            float jumpVelocity = 19f;
+            rigidbody2d.velocity = Vector2.up * jumpVelocity;
         }
     }
-    private void OnCollisionEnter2D(Collision2D other)
+    private bool IsGrounded()
     {
-        isGrounded = true;
+        RaycastHit2D raycastHit2d = Physics2D.BoxCast(boxCollider2d.bounds.center, boxCollider2d.bounds.size, 0f, Vector2.down, 0.15f, layerMask);
+        return raycastHit2d.collider != null;
     }
 }
