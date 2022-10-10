@@ -7,6 +7,7 @@ public class PlayerMovement : MonoBehaviour
     public Rigidbody2D rb;
     private bool isGrounded;
 
+
     [SerializeField] private float jumpVelocity = 15f;
 
     private void Update()
