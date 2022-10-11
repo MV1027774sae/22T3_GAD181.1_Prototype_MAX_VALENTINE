@@ -8,6 +8,6 @@ public class TileMovement : MonoBehaviour
 
     private void Start()
     {
-        GetComponent<Rigidbody2D>().velocity = new Vector3(-6, 0, 0);
+        GetComponent<Rigidbody2D>().velocity = new Vector3(-8, 0, 0);
     }
 }
