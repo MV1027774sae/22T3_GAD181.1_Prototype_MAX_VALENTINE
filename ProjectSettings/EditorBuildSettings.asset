@@ -32,4 +32,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Goldrush_MitchVersion.unity
     guid: 6533cab1645fe834c833e432e076745f
+  - enabled: 1
+    path: Assets/Scenes/PlayMode.unity
+    guid: 49d87ef6c100c914f8f9c917a0483d1c
   m_configObjects: {}
