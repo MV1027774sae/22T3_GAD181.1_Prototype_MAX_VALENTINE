@@ -6,12 +6,18 @@ public class CounterPickup : MonoBehaviour
 {
     public delegate void GoldCounterAction();
     public static event GoldCounterAction OnGoldUpdate;
+    public AudioSource Gold;
 
     private void OnTriggerEnter2D(Collider2D other)
     {
         if (other.gameObject.tag == "Player")
         {
             OnGoldUpdate();
+            PlayGold();
         }
+    }
+    public void PlayGold()
+    {
+        Gold.Play();
     }
 }
