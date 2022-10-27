@@ -20,8 +20,6 @@ public class GoldCounter : MonoBehaviour
         CounterPickup.OnGoldUpdate -= IncreaseGoldCount;
     }
 
-    // when the OnMarbleReset event is announced, we increase the counter's value
-
     private void IncreaseGoldCount()
     {
         resetCount++;
